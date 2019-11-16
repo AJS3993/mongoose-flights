@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
-var moviesCtrl = require('../controllers/flights');
+var flightsCtrl = require('../controllers/flights');
 
 /* GET /movies/new */
-router.get('/', moviesCtrl.index);
-router.get('/new', moviesCtrl.new);
-router.post('/', moviesCtrl.create);
+router.get('/', flightsCtrl.index);
+router.get('/new', flightsCtrl.new);
+router.post('/', flightsCtrl.create);
 
 module.exports = router;

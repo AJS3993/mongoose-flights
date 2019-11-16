@@ -2,28 +2,18 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 
-var movieSchema = new mongoose.Schema({
-  title: {
-    type: String,
-    required: true
-  },
-  releaseYear: {
+var flightSchema = new mongoose.Schema({
+  flightNo: {
    type: Number,
-   default: function() {
-    return new Date().getFullYear();
-   },
-   min: 1927
   },
-  mpaaRating: {
+  airline: {
     type: String,
-    enum: ['G', 'PG', 'PG-13', 'R']
+    enum: ['American', 'Southwest', 'United']
   },
-  cast: [String],
-  nowShowing: {type: Boolean, 
-    default: true}
-}, {
-  timestamps: true
+  departure: {
+  type: Date
+}, 
 });
 
 
-module.exports = mongoose.model('Movie', movieSchema);
+module.exports = mongoose.model('Flight', flightSchema);

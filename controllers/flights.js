@@ -1,4 +1,4 @@
-var Flight = require('../models/flight');
+var Flight = require('../models/flights');
 
 module.exports = {
   index,
@@ -13,22 +13,19 @@ function index(req, res){
 }
 
 function create(req, res) {
-  req.body.nowShowing = !!req.body.nowShowing;
-  req.body.cast = req.body.cast.replace(/\s*,\s*/g, ',');
-  if (req.body.cast) req.body.cast = req.body.cast.split(',');
   
   for (let key in req.body) {
 		if (req.body[key] === '') delete req.body[key];
  }
   
-  var movie = new Movie(req.body);
-  movie.save(function(err) {
-    if (err) return res.render('movies/new');
-    console.log(movie);
-    res.redirect('/movies');
+  var flight = new Flight(req.body);
+  flight.save(function(err) {
+    if (err) return res.render('flights/new');
+    console.log(flight);
+    res.redirect('/flights');
   });
 }
 
-function newMovie(req, res) {
-  res.render('movies/new');
+function newFlight(req, res) {
+  res.render('flights/new');
 }
