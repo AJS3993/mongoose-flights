@@ -4,16 +4,17 @@ var Schema = mongoose.Schema;
 var destinationSchema = new Schema({
 airport: {
   type: String,
-  enum: ['AUS', 'DAL', 'LAX', 'SEA']
+  enum: ['AUS', 'DAL', 'LAX', 'SEA'],
+  default: 'AUS'
 },
 arrival: {
   type: Date
-}
+  }
 });
 
 var flightSchema = new mongoose.Schema({
   flightNo: {
-   type: Number,
+   type: Number
   },
   airline: {
     type: String,
@@ -24,8 +25,7 @@ var flightSchema = new mongoose.Schema({
 },
 airport: {
   type: String,
-  enum: ['AUS', 'DAL', 'LAX', 'SEA'],
-  default: 'SEA'
+  enum: ['AUS', 'DAL', 'LAX', 'SEA']
 },
 destination: [destinationSchema]
 });

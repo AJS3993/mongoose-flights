@@ -127,6 +127,6 @@ table td {
 }
 
 #add-destination-form input[type="submit"] {
-  width: 8rem;
+  width: 10rem;
   grid-column: 2 / 3;
 }
