@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Mongoose Flights</title>
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
+
+<%- include('../partials/header') %>
 
 <body>
+    <nav>
+        <a href="../flights">ALL Flights</a>
+      </nav>
   <h2>Enter a New Flight</h2>
-  <form action="/flights" method="POST">
+  <form action="/flights" method="POST" id="new-form">
     
     <label>Airline
       <select name="airline">
@@ -34,6 +30,5 @@
     
     <input type="submit" value="Add Flight">
   </form>
-</body>
 
-</html>
+  <%- include('../partials/footer') %>

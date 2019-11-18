@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Mongoose Flights</title>
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
+
+<%- include('../partials/header') %>
 
 <body>
+    <nav>
+        <a href="../flights/new" >ADD Flight</a>
+      </nav>
   <h2>Flight List</h2>
-  <table>
+  <table id='list'>
 <thead>
     <th>Airline</th>
     <th>Flight Number</th>
@@ -22,10 +18,11 @@
         <td><%= flight.airline %></td>
         <td><%= flight.flightNo %></td>
         <td><%= flight.departure %></td>
+        <td><a href="/flights/<%= flight._id %>">DETAILS</a></td>
     </tr>
 <% }) %>
   </table>
-  
-</body>
 
-</html>
+  <%- include('../partials/footer') %>
+
+
