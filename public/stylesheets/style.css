@@ -62,19 +62,21 @@ nav > a.active {
 #new-form {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(2, minmax(auto, 22rem));
+  /* grid-template-columns: repeat(2, minmax(auto, 22rem)); */
+  margin: auto;
 }
 
-#new-form *, #add-review-form * {
+#new-form *, #add-destination-form * {
   font-size: 20px;
   padding: 5px;
   border-radius: 5px;
+  margin: auto;
 }
 
 #new-form input[type="submit"] {
   grid-column: span 2;
   width: 10rem;
-  margin-left: auto;
+  margin: auto;
 }
 
 table {
@@ -117,14 +119,14 @@ table td {
   font-weight: bold;
 }
 
-#add-review-form {
+#add-destination-form {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 1rem;
   margin-bottom: 2rem;
 }
 
-#add-review-form input[type="submit"] {
+#add-destination-form input[type="submit"] {
   width: 8rem;
   grid-column: 2 / 3;
 }

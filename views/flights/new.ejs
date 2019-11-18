@@ -2,14 +2,22 @@
 
 <%- include('../partials/header') %>
 
-<body>
-    <nav>
-        <a href="../flights">ALL Flights</a>
-      </nav>
+
+
   <h2>Enter a New Flight</h2>
   <form action="/flights" method="POST" id="new-form">
     
-    <label>Airline
+    <label>Airport:
+      <select name="airport">
+        <option value="AUS">AUS</option>
+        <option value="DAL">DAL</option>
+        <option value="LAX">LAX</option>
+        <option value="SEA">SEA</option>
+      </select>
+    </label><br>
+    
+    
+    <label>Airline:
       <select name="airline">
         <option value="American">American</option>
         <option value="Southwest">Southwest</option>

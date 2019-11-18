@@ -2,19 +2,17 @@
 
 <%- include('../partials/header') %>
 
-<body>
-    <nav>
-        <a href="../flights/new" >ADD Flight</a>
-      </nav>
   <h2>Flight List</h2>
   <table id='list'>
 <thead>
+    <th>Airport</th>
     <th>Airline</th>
     <th>Flight Number</th>
     <th>Departure</th>
 </thead>
 <% flights.forEach(function(flight){ %>
     <tr>
+        <td><%= flight.airport %></td>
         <td><%= flight.airline %></td>
         <td><%= flight.flightNo %></td>
         <td><%= flight.departure %></td>
