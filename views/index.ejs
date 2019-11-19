@@ -1,15 +1,26 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+<
+  <!DOCTYPE html>
+<html lang="en">
 
-  
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mongoose Flights</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+<nav>
+  <a href="/flights/new" <%- title === 'Add Flight' ? 'class="active"' : '' %>>ADD FLIGHT</a>
+  <a href="/flights" <%- title === 'All Flight' ? 'class="active"' : '' %>>ALL FLIGHTS</a>
+  <a href="/" <%- title === 'Home' ? 'class="active"' : '' %>>HOME</a>
+</nav>
+<main>
     
     <h1>Keep Track of Your Flights!</h1>
-    <p>Welcome to <%= title %></p>
+    <img src="https://img1.grunge.com/img/gallery/the-real-reason-airplanes-are-almost-always-painted-white/intro-1567189774.jpg">
 
-  </body>
+  </main>
+</body>
 </html>
