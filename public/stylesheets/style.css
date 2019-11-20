@@ -8,7 +8,6 @@ body {
   margin: 0;
   background-image: url("https://cdn2.vectorstock.com/i/1000x1000/12/56/cloud-with-blue-sky-background-vector-24021256.jpg");
   background-size: cover;
-  /* height: 100vh; */
   display: grid;
   grid-template-rows: 50px 1fr;
   grid-template-areas: 
@@ -36,7 +35,6 @@ body > main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-color: rgb(138, 139, 216); */
   padding: 20px;
   overflow-y: scroll;
 }

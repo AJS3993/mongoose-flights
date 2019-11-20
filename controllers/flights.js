@@ -9,15 +9,15 @@ module.exports = {
 };
 
 function index(req, res) {
-  Flight.find({}, function(err, flights) {
-    res.render('flights/index', { title: 'All Flights', flights });
+  Flight.find({}, function(err, flight) {
+    res.render('flights/index', { title: 'All Flights', flight });
   })};
 
 function show(req, res) {
   Flight.findById(req.params.id, function(err, flight) {
-    Ticket.find({flights: flight._id}, function(err, tickets) {
-    
-    res.render('flights/show', { title: 'Flight Details', tickets, flight });
+    Ticket.find({flight: flight._id}, function(err, ticket) {
+    console.log(ticket)
+    res.render('flights/show', { title: 'Flight Details', flight, ticket });
   });
   })
 }
