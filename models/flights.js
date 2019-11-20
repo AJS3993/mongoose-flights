@@ -5,23 +5,23 @@ var destinationSchema = new Schema({
 airport: {
   type: String,
   enum: ['AUS', 'DAL', 'LAX', 'SEA'],
-  default: 'AUS'
 },
 arrival: {
-  type: Date
+  type: Date,
+  default: Date.now
   }
 });
 
 var flightSchema = new mongoose.Schema({
-  flightNo: {
-   type: Number
+  flightNo: {type: Number, min: 10, max: 9999, default: 100
   },
   airline: {
     type: String,
     enum: ['American', 'Southwest', 'United']
   },
   departure: {
-  type: Date
+  type: Date,
+  default: Date.now
 },
 airport: {
   type: String,
