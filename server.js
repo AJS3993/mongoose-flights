@@ -9,6 +9,7 @@ var indexRouter = require('./routes/index');
 var flightsRouter = require('./routes/flights');
 var destinationsRouter = require('./routes/destinations');
 var ticketsRouter = require('./routes/tickets');
+var methodOverride = require('method-override');
 
 var app = express();
 
@@ -21,6 +22,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/flights', flightsRouter);
