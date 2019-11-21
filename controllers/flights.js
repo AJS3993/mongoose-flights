@@ -42,11 +42,9 @@ function newFlight(req, res) {
 }
 
 function deleteFlight(req, res) {
-
-Flight.findById(req.params.id, function(err, flight) {
-  flight.destination.pop(req.body);
+  Flight.findById(req.params.id, function(err, flight){
   flight.deleteOne(function(err) {
     res.redirect(`/flights/`);
-  });
-});
+  })
+})
 }
