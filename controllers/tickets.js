@@ -1,5 +1,5 @@
 const Ticket = require('../models/tickets');
-const Flight = require('../models/flights');
+//const Flight = require('../models/flights');
 
 module.exports = {
 	new: newTicket,
